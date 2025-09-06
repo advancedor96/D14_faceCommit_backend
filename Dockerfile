@@ -8,7 +8,7 @@ FROM eclipse-temurin:21-jdk
 # 將專案所有文件複製到容器中
 WORKDIR /app
 COPY . .
-RUN chmod +x mvnw
+# RUN chmod +x mvnw
 
 
 # 使用 Maven 打包 Spring Boot 應用
