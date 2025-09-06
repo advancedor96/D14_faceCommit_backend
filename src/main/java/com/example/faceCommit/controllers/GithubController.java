@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import java.io.IOException;
 import java.util.Map;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.nio.charset.StandardCharsets;
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.time.LocalDate;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class GithubController {
     @Autowired
     @Value("${GITHUB_TOKEN}")
