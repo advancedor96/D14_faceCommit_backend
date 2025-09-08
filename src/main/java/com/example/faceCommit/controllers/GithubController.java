@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.time.LocalDate;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class GithubController {
     @Autowired
     @Value("${GITHUB_TOKEN}")
