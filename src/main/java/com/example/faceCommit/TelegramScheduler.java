@@ -14,11 +14,11 @@ public class TelegramScheduler {
     @Autowired
     private TelegramService telegramService;
     
-    @Scheduled(cron = "0 0/30 * * * ?")
+    @Scheduled(cron = "0 0 * * * ?")
     public void sendScheduledMessage() {
        ZonedDateTime now = ZonedDateTime.now(ZoneOffset.ofHours(2));
         // 只要小時和 00 分鐘
-        String hourTime = now.withMinute(0).withSecond(0).format(DateTimeFormatter.ofPattern("HH:mm"));
+        String hourTime = now.format(DateTimeFormatter.ofPattern("HH:mm"));
 
 
         telegramService.sendMessage("你的GCP java還活著，時間" + hourTime);
